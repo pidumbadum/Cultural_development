@@ -14,5 +14,32 @@ def test_with_bug():
     print("Bug")
     #assert add_with_bug(2, 3) == 5
 
+# Примеры не очень
+# def test_dublicate():
+#     #тест дублирует себя
+#     assert add(2, 2) == 2 + 2
+#
+# def test_overcomplicate():
+#     #Слишком перегруженный тест
+#     for i in range(0,2**32):
+#         for j in range(0,2**32):
+#             assert add(i, i) == sum(i, j)
+
+def test_reasonable():
+    assert add(2, 2) == 4
+    assert add(0, 0) == 0
+    assert add(6, 7) == 13
+    assert add(-6, 7) == 1
+    print("reasonable")
+
+def test_commutative():
+    assert add(2, -2) == 0
+    assert add(-2, 2) == 0
+    print("Commutative is true")
+
 if __name__ == "__main__":
     test_addition()
+    test_with_bug()
+    # test_dublicate()
+    test_reasonable()
+    test_commutative()
