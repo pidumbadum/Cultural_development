@@ -1,4 +1,7 @@
-from my_math import add
+from my_math import (
+add,
+add_with_bug,
+)
 
 def test_addition():
     assert add(2, 2) == 4
@@ -10,3 +13,6 @@ def test_with_bug():
     assert add_with_bug(1, 1) == 1
     print("Bug")
     #assert add_with_bug(2, 3) == 5
+
+if __name__ == "__main__":
+    test_addition()
